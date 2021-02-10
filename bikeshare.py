@@ -8,7 +8,7 @@ CITY_DATA = { 'chicago': 'chicago.csv',
 
 def get_filters():
 
-    print('Hello! Let\'s explore some US bikeshare data!')
+    print('Welcome dear user! Let\'s explore some US bikeshare data!')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = input('Please enter the city you are interested in (chicago, new york city, washington):')
     while city not in CITY_DATA:
