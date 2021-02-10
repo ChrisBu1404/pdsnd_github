@@ -7,15 +7,8 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'washington': 'washington.csv' }
 
 def get_filters():
-    """
-    Asks user to specify a city, month, and day to analyze.
 
-    Returns:
-        (str) city - name of the city to analyze
-        (str) month - name of the month to filter by, or "all" to apply no month filter
-        (str) day - name of the day of week to filter by, or "all" to apply no day filter
-    """
-    print('Hello! Let\'s explore some US bikeshare data!')
+    print('Welcome dear user! Let\'s explore some US bikeshare data!')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = input('Please enter the city you are interested in (chicago, new york city, washington):')
     while city not in CITY_DATA:
@@ -25,7 +18,6 @@ def get_filters():
     months = ['all','january','february','march','april','may','june']
     while month not in months:
         month = input('You misspelled something! PLease enter the month you are interested in or all (all, january, february, ... , june):')
-
     # get user input for day of week (all, monday, tuesday, ... sunday)
     days = ['all','monday','tuesday','wednesday','thursday','friday','saturday','sunday']
     day = input('Please enter the day you are interested in (all, monday, tuesday, ... sunday):')
@@ -36,16 +28,7 @@ def get_filters():
 
 
 def load_data(city, month, day):
-    """
-    Loads data for the specified city and filters by month and day if applicable.
 
-    Args:
-        (str) city - name of the city to analyze
-        (str) month - name of the month to filter by, or "all" to apply no month filter
-        (str) day - name of the day of week to filter by, or "all" to apply no day filter
-    Returns:
-        df - Pandas DataFrame containing city data filtered by month and day
-    """
     df = pd.read_csv(CITY_DATA[city])
 
     # convert the Start Time column to datetime
@@ -187,7 +170,6 @@ def main():
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
-
 
 if __name__ == "__main__":
 	main()
