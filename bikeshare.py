@@ -18,7 +18,6 @@ def get_filters():
     months = ['all','january','february','march','april','may','june']
     while month not in months:
         month = input('You misspelled something! PLease enter the month you are interested in or all (all, january, february, ... , june):')
-
     # get user input for day of week (all, monday, tuesday, ... sunday)
     days = ['all','monday','tuesday','wednesday','thursday','friday','saturday','sunday']
     day = input('Please enter the day you are interested in (all, monday, tuesday, ... sunday):')
@@ -171,7 +170,6 @@ def main():
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
-
 
 if __name__ == "__main__":
 	main()
